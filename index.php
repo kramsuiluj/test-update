@@ -39,6 +39,7 @@ $results = $crud->display();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
     <title>Test | Update</title>
 </head>
 <body>
@@ -71,6 +72,7 @@ $results = $crud->display();
                 
                 <?php foreach ($results as $result) { ?>    
                     <input class="data" type="text" name="d_tdata" value="<?php echo $result['tdata']; ?>" readonly>
+                    <br>
                 <?php } ?>
 
             </section>
