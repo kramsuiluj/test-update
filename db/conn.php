@@ -1,5 +1,7 @@
 <?php 
 
+require_once 'crud.php';
+
 $host = "localhost";
 $name = "test-update";
 $user = "root";
@@ -9,7 +11,7 @@ $dsn = "mysql:host=$host;dbname=$name";
 try {
 
     $pdo = new PDO($dsn, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::EXCEPTION_ERRMODE);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
 
@@ -17,5 +19,6 @@ try {
 
 }
 
+$crud = new crud($pdo);
 
 ?>

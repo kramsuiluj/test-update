@@ -32,6 +32,24 @@ class crud {
 
     }
 
+    public function display() {
+
+        try {
+
+            $sql = "SELECT * FROM test";
+
+            $result = $this->db->query($sql);
+
+            return $result;
+
+        } catch (PDOException $e) {
+
+            return false;
+
+        }
+
+    }
+
 }
 
 ?>
